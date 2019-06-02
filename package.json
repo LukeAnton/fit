@@ -4,7 +4,8 @@
   "description": "peer to peer fitness application",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server"
   },
   "author": "Luke A Firth",
   "license": "MIT",
