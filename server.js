@@ -3,12 +3,15 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-//DB CONNECTION <--- db.js
+//---------DB CONNECTION <--- db.js
 connectDB();
+
+//----------MiddleWare------------
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API Running"));
 
-//Define routes
+//Routes
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/trainers", require("./routes/api/trainers"));
 app.use("/api/auth", require("./routes/api/auth"));
