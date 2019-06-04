@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://lukeanton:5853luke@trainer-main-hz4jn.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://lukeanton:5853luke@trainer-main-hz4jn.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }

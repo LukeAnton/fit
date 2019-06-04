@@ -12,8 +12,10 @@
 
 ## Cool Stuff
 
-#### Express Validator allows you to set up really nice checks, works amazing with express and custom error messages and return them in an array! good stuff!!!
+#### Express Validator allows you to set up really nice checks, works amazing with express and custom error messages that you can return in various types like an array
 
 #### Postman really helped with a visual with development allowing all requests to be saved in folders and related to the request -----show errors and postman getup-----
 
-#### Another thing i found pretty interesting was using sub-documents in MongoDB allowing you to have a schema inside a schema. In my opinion i think it helps with neatness. -- it is also not needed because the whole point of mongoDB is to veer away from schemas because they are very rigid with the data structure the provide where as collections are a flexible alternative to a schema allowing you to nest data inside the collection and use aggregate methods to retreive it.
+#### Another thing i found pretty interesting was using sub-documents in MongoDB allowing you to have a schema inside a schema. In my opinion i think it helps with neatness. -- it is also not needed because the whole point of mongoDB is to veer away from schemas because they are very rigid with the data structure the provide where as collections are a flexible alternative to a schema allowing you to nest data inside the collection and use aggregate methods to retrieve it.
+
+#### A pleasent suprise was that the Navigator.geolocation interface is built into all browsers and works on mobile too. the Navigator.geolocation function returns an object containing location information of the device.

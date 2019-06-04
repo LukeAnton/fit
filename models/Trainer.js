@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const TrainerSchema = new mongoose.Shema({
+const TrainerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -28,17 +28,9 @@ const TrainerSchema = new mongoose.Shema({
     type: Boolean,
     default: false
   },
-  geometry: GeoSchema
-});
-
-const GeoSchema = new Schema({
-  type: {
-    type: String,
-    default: "Point"
-  },
-  coordinates: {
-    type: [Number],
-    index: "2dsphere"
+  geometry: {
+    type: { type: String, default: "Point" },
+    coordinates: { type: [Number], index: "2dsphere" }
   }
 });
 
