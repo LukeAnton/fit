@@ -5,7 +5,7 @@ module.exports = function(req, res, next) {
   //exporting middleware function
   const token = req.header("x-auth-token");
 
-  //getting the token with req.header - sending in x-auth-token
+  //getting the token with req.header - sending in x-auth-token --this is just the name for it
 
   //if no token return this error
   if (!token) {
