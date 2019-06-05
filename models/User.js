@@ -1,6 +1,18 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const UserSchema = new mongoose.Schema({
+const GeoSchema = new Schema({
+  type: {
+    type: String,
+    default: "Point"
+  },
+  coordinates: {
+    type: [Number],
+    index: "2dsphere"
+  }
+});
+
+const UserSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -21,10 +33,7 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  geometry: {
-    type: { type: String, default: "Point" },
-    coordinates: { type: [Number], index: "2dsphere" }
-  }
+  geometry: GeoSchema
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
