@@ -1,28 +1,34 @@
 const express = require("express");
 const router = express.Router();
-const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
+const autht = require("../../middleware/authtrainer");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator/check");
 
 const Trainer = require("../../models/Trainer");
 
-//@route    POST api/trainers
-//@desc     Register trainer
-//@access   Public
+// @route    GET api/autht
+// @desc     Test route
+// @access   Public
+router.get("/", autht, async (req, res) => {
+  try {
+    const trainer = await Trainer.findById(req.trainer.id).select("-password");
+    res.json(trainer);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
 
+// @route    POST api/autht
+// @desc     Authenticate trainer & get token
+// @access   Public
 router.post(
   "/",
   [
-    check("name", "Name is required")
-      .not()
-      .isEmpty(),
     check("email", "Please include a valid email").isEmail(),
-    check(
-      "password",
-      "Please enter a password with 6 or more characters"
-    ).isLength({ min: 6 })
+    check("password", "Password is required").exists()
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -30,36 +36,24 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password, skills, geometry } = req.body;
+    const { email, password } = req.body;
 
     try {
       let trainer = await Trainer.findOne({ email });
 
-      if (trainer) {
+      if (!trainer) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Trainer already exists" }] });
+          .json({ errors: [{ msg: "Invalid Credentials" }] });
       }
 
-      const avatar = gravatar.url(email, {
-        s: "200",
-        r: "pg",
-        d: "mm"
-      });
+      const isMatch = await bcrypt.compare(password, trainer.password);
 
-      trainer = new Trainer({
-        name,
-        email,
-        avatar,
-        password,
-        geometry
-      });
-
-      const salt = await bcrypt.genSalt(10);
-
-      trainer.password = await bcrypt.hash(password, salt);
-
-      await trainer.save();
+      if (!isMatch) {
+        return res
+          .status(400)
+          .json({ errors: [{ msg: "Invalid Credentials" }] });
+      }
 
       const payload = {
         trainer: {

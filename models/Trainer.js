@@ -1,6 +1,18 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const TrainerSchema = new mongoose.Schema({
+const GeoSchema = new Schema({
+  type: {
+    type: String,
+    default: "Point"
+  },
+  coordinates: {
+    type: [Number],
+    index: "2dsphere"
+  }
+});
+
+const TrainerSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -22,16 +34,13 @@ const TrainerSchema = new mongoose.Schema({
     default: Date.now
   },
   skills: {
-    type: String
+    type: [String]
   },
   available: {
     type: Boolean,
     default: false
   },
-  geometry: {
-    type: { type: String, default: "Point" },
-    coordinates: { type: [Number], index: "2dsphere" }
-  }
+  geometry: GeoSchema
 });
 
 module.exports = Trainer = mongoose.model("trainer", TrainerSchema);
