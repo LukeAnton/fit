@@ -83,4 +83,26 @@ router.post(
   }
 );
 
+router.get("/trainers", async (req, res) => {
+  try {
+    const getTrainers = await Trainer.aggregate([
+      {
+        $geoNear: {
+          near: {
+            type: "Point",
+            coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)]
+          },
+          maxDistance: 1000000,
+          distanceField: "distance",
+          spherical: true
+        }
+      }
+    ]);
+    res.send(trainers);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 module.exports = router;

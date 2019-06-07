@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Niramit:300,400,500,600,700|Reem+Kufi|Telex|Varela+Round&display=swap");
+/* font-family: 'Didact Gothic', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+font-family: 'Telex', sans-serif;
+font-family: 'Varela Round', sans-serif;
+font-family: 'Niramit', sans-serif; */
+
+$white: #f5f5e4;
+$grey: #e7e7e7;
+$blue: #343a56;
+$dark: #151824;
+$light-blue: #54668e;
+$danger: #770c0c;
+$success: #647e38;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $dark;
+  } @else {
+    @return $white;
+  }
+}
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//Media Query Mixins
+@mixin mediaXSm {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

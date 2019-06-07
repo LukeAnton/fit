@@ -102,5 +102,20 @@ router.post(
     }
   }
 );
+// @route    POST api/profile
+// @desc     GET all profiles
+// @access   Public
+router.get("/", async (req, res) => {
+  try {
+    const trainerprofiles = await TrainerProfile.find().populate("trainer", [
+      "name",
+      "avatar"
+    ]);
+    res.json(trainerprofiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
 
 module.exports = router;

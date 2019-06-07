@@ -1,0 +1,70 @@
+//Backgrounds
+.bg {
+  &-primary {
+    @include set-background($blue);
+  }
+  &-light {
+    @include set-background($grey);
+  }
+  &-dark {
+    @include set-background($dark);
+  }
+  &-success {
+    @include set-background($success);
+  }
+  &-danger {
+    @include set-background($danger);
+  }
+  &-white {
+    @include set-background($white);
+  }
+}
+//buttons
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  background: $light-blue;
+  color: $white;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+
+  &.btn-light {
+    @include set-background($light-blue);
+    &:hover {
+      background: lighten($dark, 10%);
+    }
+  }
+}
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($white, 0.7);
+}
