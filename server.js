@@ -19,6 +19,6 @@ app.use("/api/authtrainer", require("./routes/api/authtrainer"));
 app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/trainerprofile", require("./routes/api/trainerprofile"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

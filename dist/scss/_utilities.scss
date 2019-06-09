@@ -1,3 +1,13 @@
+//Container
+.container {
+  max-width: $max-width;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
 //Backgrounds
 .bg {
   &-primary {
@@ -18,6 +28,24 @@
   &-white {
     @include set-background($white);
   }
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.text-primary {
+  color: $blue;
+}
+
+.round-img {
+  border-radius: 1000px;
+}
+
+.line {
+  height: 1px;
+  background: $dark;
+  margin: 1.5rem 0;
 }
 //buttons
 .btn {
@@ -40,9 +68,33 @@
     }
   }
 }
+
+//Alerts
+.alert {
+  padding: 7px;
+  margin: 0 0 15px 0;
+  text-align: center;
+  opacity: 0.9;
+  background: $light-blue;
+  color: $white;
+
+  &.alert-primary {
+    @include set-background($blue);
+  }
+  &.alert-dark {
+    @include set-background($dark);
+  }
+  &.success {
+    @include set-background($success);
+  }
+  &.alert-danger {
+    @include set-background($danger);
+  }
+}
+
 .x-large {
   font-size: 4rem;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 1rem;
 }
 .large {

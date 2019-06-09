@@ -10,20 +10,9 @@ $grey: #e7e7e7;
 $blue: #343a56;
 $dark: #151824;
 $light-blue: #54668e;
-$danger: #770c0c;
-$success: #647e38;
-
-@function set-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return $dark;
-  } @else {
-    @return $white;
-  }
-}
-@mixin set-background($color) {
-  background-color: $color;
-  color: set-text-color($color);
-}
+$danger: #ff4545;
+$success: #d7ff96;
+$max-width: 1100px;
 
 //Media Query Mixins
 @mixin mediaXSm {
@@ -50,5 +39,41 @@ $success: #647e38;
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
+  }
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) >70) {
+    @return $dark;
+  } @else {
+    @return $white;
+  }
+}
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+// Margin & Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  // All around margin
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  // Vertical Margin
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  // All around Padding
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  // Vertical Padding
+  .py-#{$space} {
+    padding: #{$space}rem 0;
   }
 }

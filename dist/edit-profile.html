@@ -1,0 +1,83 @@
+<!-- class="current-page" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="index.html"><img class="logo" src="icons/fit.svg" alt=" "/></a>
+      </h1>
+      <ul>
+        <li><a href="profiles.html">Trainers</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+    <section class="container">
+      <h1 class="large text-primary">Edit Profile</h1>
+      <p class="lead"><i class="fa fa-user"></i>Make changes to your profile</p>
+      <small>* = required field</small>
+      <form class="form">
+        <div class="form-group">
+          <select type="text" name="location">
+            <option value="0">* Location</option>
+            <option value="Sydney">Sydney</option>
+            <option value="Melbourne">Melbourne</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="* Skills" name="skills" />
+          <small class="form-text"
+            >Please use comma separated values (eg. Crossfit, Boxing, Endurance,
+            Strength)</small
+          >
+        </div>
+
+        <div class="form-group">
+          <textarea placeholder="A short bio of yourself" name="bio"></textarea>
+          <small class="form-text">Tell us a little about yourself</small>
+        </div>
+
+        <div class="my-2">
+          <button type="button" class="btn btn-light">
+            Add Social Network Links
+          </button>
+          <span>Optional</span>
+        </div>
+
+        <div class="form-group social-input">
+          <i class="fa fa-twitter fa-2x"></i>
+          <input type="text" placeholder="Twitter URL" name="twitter" />
+        </div>
+
+        <div class="form-group social-input">
+          <i class="fa fa-facebook fa-2x"></i>
+          <input type="text" placeholder="Facebook URL" name="facebook" />
+        </div>
+
+        <div class="form-group social-input">
+          <i class="fa fa-linkedin fa-2x"></i>
+          <input type="text" placeholder="Linkedin URL" name="linkedin" />
+        </div>
+
+        <div class="form-group social-input">
+          <i class="fa fa-instagram fa-2x"></i>
+          <input type="text" placeholder="Instagram URL" name="instagram" />
+        </div>
+        <input type="submit" class="btn btn-light my-1 " />
+        <a class="btn btn-light my-1" href="dashboard.html">Go Back</a>
+      </form>
+    </section>
+  </body>
+</html>

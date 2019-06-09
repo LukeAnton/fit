@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
-    "sass": "node-sass -w client/scss/ -o client/css/ --recursive"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "sass": "node-sass -w dist/scss/ -o dist/css/ --recursive"
   },
   "author": "Luke A Firth",
   "license": "MIT",

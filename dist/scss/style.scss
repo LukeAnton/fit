@@ -1,0 +1,161 @@
+@import "config";
+@import "utilities";
+@import "form";
+
+.current-page {
+  border-bottom: 2px solid $white;
+  transition: 1s;
+  transform-origin: left;
+}
+.prof {
+  margin-left: -5px;
+  width: 27px;
+  height: 27px;
+}
+.logspace {
+  margin-left: -10px;
+}
+.round-img {
+  width: 100%;
+}
+* {
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: arial;
+  background-color: $white;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $blue;
+}
+
+ul {
+  list-style: none;
+}
+img {
+  margin-bottom: -4px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  background-color: $blue;
+  border-bottom: solid 1px $blue;
+  /* opacity: 0.9; */
+  ul {
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    padding: 10px;
+    margin: 0 5px;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.find-trainers {
+  margin-top: 5px;
+  margin-left: -5px;
+  width: 30px;
+  fill: $white;
+  display: inline-block;
+  &:hover {
+    fill: $dark;
+  }
+}
+.fitlit {
+  width: 30px;
+  height: 20px;
+  margin-right: 8px;
+}
+.landing {
+  position: relative;
+  background: url(../icons/run3.jpg) no-repeat center/cover;
+  height: 100vh;
+
+  &-inner {
+    color: $white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .landing-about {
+    max-width: 200px;
+    font-weight: 200;
+    color: $dark;
+    margin-bottom: 50px;
+  }
+}
+.fit-mid {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.account-sug {
+  margin-top: 6px;
+}
+
+//Profiles
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+//Profile Page
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+    "top"
+    "bio";
+  grid-gap: 1rem;
+
+  .profile-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    img {
+      width: 250px;
+    }
+    .icons a {
+      color: $dark;
+      smargin: 0 0.3rem;
+      &:hover {
+        transition: 0.2s;
+        color: $white;
+      }
+    }
+  }
+  .profile-about {
+    grid-area: bio;
+    text-align: center;
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

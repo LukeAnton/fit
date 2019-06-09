@@ -4,6 +4,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const auth = require("../../middleware/auth");
 const { check, validationResult } = require("express-validator/check");
 
 const User = require("../../models/User");
@@ -83,9 +84,9 @@ router.post(
   }
 );
 
-router.get("/trainers", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
-    const getTrainers = await Trainer.aggregate([
+    const trainers = await Trainer.aggregate([
       {
         $geoNear: {
           near: {
