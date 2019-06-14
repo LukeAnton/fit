@@ -8,7 +8,7 @@ const connectDB = async () => {
   try {
     await mongoose.connect(
       db,
-      { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true }
+      { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false }
     );
     console.log("DB Connected....");
   } catch (err) {

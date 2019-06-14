@@ -36,4 +36,4 @@ const UserSchema = new Schema({
   geometry: GeoSchema
 });
 
-module.exports = User = mongoose.model("users", UserSchema);
+module.exports = User = mongoose.model("user", UserSchema);

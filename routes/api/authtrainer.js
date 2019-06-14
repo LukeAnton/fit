@@ -40,13 +40,13 @@ router.post(
 
     try {
       let trainer = await Trainer.findOne({ email });
-
+      //here
       if (!trainer) {
         return res
           .status(400)
           .json({ errors: [{ msg: "Invalid Credentials" }] });
       }
-
+      //here
       const isMatch = await bcrypt.compare(password, trainer.password);
 
       if (!isMatch) {

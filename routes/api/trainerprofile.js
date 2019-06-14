@@ -36,9 +36,6 @@ router.post(
   [
     auth,
     [
-      check("status", "Status is required")
-        .not()
-        .isEmpty(),
       check("skills", "Skills is required")
         .not()
         .isEmpty()
@@ -52,7 +49,6 @@ router.post(
 
     const {
       location,
-      status,
       skills,
       bio,
       twitter,
@@ -65,7 +61,6 @@ router.post(
     const trainerProfileFields = {};
     trainerProfileFields.trainer = req.trainer.id;
     if (location) trainerProfileFields.location = location;
-    if (status) trainerProfileFields.status = status;
     if (bio) trainerProfileFields.bio = bio;
     if (skills) {
       trainerProfileFields.skills = skills

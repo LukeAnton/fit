@@ -71,7 +71,7 @@ router.post(
       jwt.sign(
         payload,
         config.get("jwtSecret"),
-        { expiresIn: 360000 },
+        { expiresIn: 9000000 },
         (err, token) => {
           if (err) throw err;
           res.json({ token });
@@ -84,7 +84,11 @@ router.post(
   }
 );
 
-router.get("/", auth, async (req, res) => {
+//@route    get api/trainers
+//@desc     Register user
+//@access   Public
+// auth,
+router.get("/", async (req, res) => {
   try {
     const trainers = await Trainer.aggregate([
       {
@@ -93,6 +97,7 @@ router.get("/", auth, async (req, res) => {
             type: "Point",
             coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)]
           },
+          //M
           maxDistance: 1000000,
           distanceField: "distance",
           spherical: true

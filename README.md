@@ -16,6 +16,22 @@
 
 #### Postman really helped with a visual with development allowing all requests to be saved in folders and related to the request -----show errors and postman getup-----
 
-#### Another thing i found pretty interesting was using sub-documents in MongoDB allowing you to have a schema inside a schema. In my opinion i think it helps with neatness. -- it is also not needed because the whole point of mongoDB is to veer away from schemas because they are very rigid with the data structure the provide where as collections are a flexible alternative to a schema allowing you to nest data inside the collection and use aggregate methods to retrieve it.
-
 #### A pleasent suprise was that the Navigator.geolocation interface is built into all browsers and works on mobile too. the Navigator.geolocation function returns an object containing location information of the device.
+
+#### Redux steps -- Create action types.js, fire the action, in reducer define the action logic
+
+###Hooks -------- useState replaces this.state = {state} and this.setState{blah} with
+
+        --data--    --function--
+
+const [stateData, setFunction] = useState({
+data0: '',
+data1: '',
+data3: '',
+});
+
+---deconstruction---
+const [data0, data1, data2] = stateData;
+
+----setting the state----
+setTrainers(result.data);

@@ -4,11 +4,62 @@ font-family: 'Reem Kufi', sans-serif;
 font-family: 'Telex', sans-serif;
 font-family: 'Varela Round', sans-serif;
 font-family: 'Niramit', sans-serif; */
+nav .mapicon {
+  position: absolute;
+  left: 400px;
+  top: 500px;
+  width: 40px;
+  visibility: hidden;
+}
+.mapicon1 {
+  position: absolute;
+  left: 300px;
+  top: 400px;
+  width: 40px;
+  visibility: hidden;
+}
+.mapicon2 {
+  position: absolute;
+  left: 200px;
+  top: 700px;
+  width: 40px;
+  visibility: hidden;
+}
+.mapicon3 {
+  position: absolute;
+  left: 360px;
+  top: 530px;
+  width: 40px;
+  visibility: hidden;
+}
+.map-container {
+  position: absolute;
+  height: 900px !important;
+  bottom: 50px;
+}
+#map {
+  height: 600px;
+  width: 100%;
+}
+.find-trainers {
+  box-sizing: border-box;
+  position: absolute;
+  width: 101% !important;
+  height: 70px !important;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  opacity: 0.9;
+}
+span.findt {
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50px);
+}
 .m-1 {
   margin: 1rem;
 }
-
-.my-1 {
+landing-inner .my-1 {
   margin: 1rem 0;
 }
 
@@ -131,7 +182,11 @@ font-family: 'Niramit', sans-serif; */
 .text-primary {
   color: #343a56;
 }
-
+.fit {
+  margin-bottom: -7px;
+  fill: #f5f5e4;
+  width: 28px;
+}
 .round-img {
   border-radius: 1000px;
 }
@@ -155,6 +210,9 @@ font-family: 'Niramit', sans-serif; */
   outline: none;
   transition: all 0.2s ease-in;
 }
+.btn.btn-danger {
+  background-color: #ff4545;
+}
 .btn.btn-light {
   background-color: #54668e;
   color: #f5f5e4;
@@ -168,8 +226,8 @@ font-family: 'Niramit', sans-serif; */
   margin: 0 0 15px 0;
   text-align: center;
   opacity: 0.9;
-  background: #54668e;
-  color: #f5f5e4;
+  background: #d7ff96;
+  color: #151824;
 }
 .alert.alert-primary {
   background-color: #343a56;
@@ -300,7 +358,7 @@ body {
   font-family: arial;
   background-color: #f5f5e4;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.9;
   color: #343a56;
 }
 
@@ -322,7 +380,7 @@ img {
   width: 100%;
   top: 0;
   background-color: #343a56;
-  border-bottom: solid 1px #343a56;
+
   /* opacity: 0.9; */
 }
 .navbar ul {
