@@ -12,6 +12,12 @@ const TrainerNavbar = ({
   const authLinks = (
     <ul>
       <li>
+        <Link to="/#">
+          <i class="fa fa-connectdevelop" />{" "}
+          <span className="hide-sm">Connections</span>
+        </Link>
+      </li>
+      <li>
         <Link to="/dashboardt">
           <i className="fa fa-user" />{" "}
           <span className="hide-sm">Dashboard</span>

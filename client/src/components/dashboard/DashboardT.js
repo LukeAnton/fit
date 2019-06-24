@@ -21,7 +21,7 @@ const DashboardT = ({
   return (
     <Fragment>
       <TrainerNavbar />
-      <h1 className="large text-primary">Dashboard</h1>
+      <h1 className="large text-primary">Trainer Dashboard</h1>
       <p className="lead">
         <i className="fa fa-user" />
         Welcome {user && user.name}

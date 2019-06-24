@@ -40,7 +40,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     <Fragment>
       <h1 className="large text-primary">Sign Up</h1>
       <p>Create Your Account</p>
-      <form action="dashboard" className="form" onSubmit={e => onSubmit(e)}>
+      <form action="dashboardt" className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <input
             type="text"

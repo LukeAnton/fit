@@ -16,6 +16,7 @@ import EditProfile from "./components/profile-forms/EditProfile";
 import Profiles from "./components/profiles/Profiles";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import MapConfig from "./components/findtrainers/MapConfig";
+import GeoLocate from "./components/findtrainers/GeoLocate";
 import { loadUser } from "./actions/auth";
 import { loadUserT } from "./actions/autht";
 import setAuthToken from "./utils/setAuthToken";
@@ -65,6 +66,7 @@ const App = () => {
               <Route exact path="/registert" component={RegisterT} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/logint" component={LoginT} />
+              <Route exact path="/geolocate" component={GeoLocate} />
 
               <Route exact path="/profiles" component={Profiles} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />

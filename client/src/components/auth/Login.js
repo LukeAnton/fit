@@ -56,7 +56,7 @@ const Login = ({ login, isAuthenticated }) => {
         Want to sign up as a Trainer? <Link to="/registert">Sign Up</Link>
       </p>
       <p className="my-1 account-sug">
-        Are you a Personal trainer? <Link to="/logint">Login Here</Link>
+        Are you a Personal trainer? <Link to="/logint">Sign In Here</Link>
       </p>
     </Fragment>
   );

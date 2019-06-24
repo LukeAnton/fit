@@ -185,7 +185,7 @@ landing-inner .my-1 {
   text-decoration: none;
   display: inline-block;
   background: #54668e;
-  color: #f5f5e4;
+  color: white;
   padding: 0.4rem 1.3rem;
   border: none;
   cursor: pointer;
@@ -196,13 +196,26 @@ landing-inner .my-1 {
 }
 .btn.btn-danger {
   background-color: #ff4545;
+  box-shadow: -1px 1px 2px rgb(89, 84, 89);
 }
+.btn.btn-danger:hover {
+  background-color: #ff4545;
+  box-shadow: -1px 1px 2px rgb(89, 84, 89);
+  transform: translateX(1px);
+  transform: translateY(-1px);
+  box-shadow: -1px 1px 8px rgb(89, 84, 89);
+}
+
 .btn.btn-light {
   background-color: #54668e;
-  color: #f5f5e4;
+  color: white;
+  box-shadow: -1px 1px 2px rgb(89, 84, 89);
 }
 .btn.btn-light:hover {
-  background: #282d44;
+  transform: translateX(1px);
+  transform: translateY(-1px);
+  background: #434966;
+  box-shadow: -1px 1px 8px rgb(89, 84, 89);
 }
 
 .alert {
@@ -283,6 +296,7 @@ landing-inner .my-1 {
   padding: 7px;
   font-size: 1.2rem;
   border: 1px solid #151824;
+  box-shadow: -1px 1px 4px rgb(89, 84, 89);
 }
 
 .form input[type="submit"] {
@@ -340,7 +354,7 @@ landing-inner .my-1 {
 
 body {
   font-family: arial;
-  background-color: #f5f5e4;
+  background-color: #fffffb;
   font-size: 14px;
   line-height: 1.9;
   color: #343a56;
@@ -363,6 +377,7 @@ img {
   z-index: 1;
   width: 100%;
   top: 0;
+  color: white;
   background-color: #343a56;
 
   /* opacity: 0.9; */
@@ -372,12 +387,12 @@ img {
 }
 .navbar a {
   text-decoration: none;
-  color: #f5f5e4;
+  color: white;
   padding: 10px;
   margin: 0 5px;
 }
 .navbar a:hover {
-  color: #343a56;
+  color: #54668e;
 }
 
 .navbart {

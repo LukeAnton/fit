@@ -19,9 +19,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout, trainers }) => {
           Find
         </Link>
       </li>
-      <li>
-        <Link to="/profiles">Trainers</Link>
-      </li>
+
       <li>
         <Link to="/dashboard">
           <i className="fa fa-user" />{" "}
@@ -38,9 +36,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout, trainers }) => {
   );
   const guestLinks = (
     <ul>
-      <li>
-        <Link to="/profiles">Trainers</Link>
-      </li>
       <li>
         <Link to="/register">Register</Link>
       </li>
@@ -98,3 +93,11 @@ export default connect(
   mapStateToProps,
   { logout }
 )(Navbar);
+
+// <li>
+//   <Link to="/profiles">Trainers</Link>
+// </li>
+//
+// <li>
+//   <Link to="/profiles">Trainers</Link>
+// </li>;

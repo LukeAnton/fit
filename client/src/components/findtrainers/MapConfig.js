@@ -1,5 +1,6 @@
 import React from "react";
 import fitlogo from "./mark.svg";
+import { geolocated } from "react-geolocated";
 import {
   GoogleMap,
   withScriptjs,
@@ -13,7 +14,7 @@ const WrappedMap = withScriptjs(
     return (
       <GoogleMap
         defaultZoom={12}
-        defaultCenter={{ lat: -33.8304, lng: 151.205 }}
+        defaultCenter={{ lat: -33.85, lng: 151.205 }}
         clickableIcons={true}
       >
         {props.trainers.map(trainer => (
@@ -38,15 +39,15 @@ class MapConfig extends React.Component {
           trainers={this.props.location.props.trainers}
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${API_KEY}`}
           loadingElement={<div style={{ height: "100%" }} />}
-          containerElement={<div style={{ height: "91%" }} />}
+          containerElement={<div style={{ height: "100%" }} />}
           mapElement={<div style={{ height: "100%" }} />}
         />
-        <div className="find-trainers btn btn-light">
-          <span className="findt">Find Trainers</span>
-        </div>
       </div>
     );
   }
 }
 
 export default MapConfig;
+// <div className="find-trainers btn btn-light">
+//   <span className="findt">Find Trainers</span>
+// </div>
