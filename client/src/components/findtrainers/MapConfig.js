@@ -1,15 +1,15 @@
 import React from "react";
-
+import fitlogo from "./mark.svg";
 import {
   GoogleMap,
   withScriptjs,
   withGoogleMap,
   Marker
 } from "react-google-maps";
-const API_KEY = "AIzaSyBxyJt8dy8SEFNe1u-0g3LmV6uoL7LOe5g";
-const iconMarker = "../../img/find.svg";
+const API_KEY = "AIzaSyCFzbD_10mMJU7AC7lStxIKSddM4yEAVwE";
 const WrappedMap = withScriptjs(
   withGoogleMap(props => {
+    const mark = { url: fitlogo, scaledSize: { width: 45, height: 45 } };
     return (
       <GoogleMap
         defaultZoom={12}
@@ -18,6 +18,7 @@ const WrappedMap = withScriptjs(
       >
         {props.trainers.map(trainer => (
           <Marker
+            options={{ icon: mark }}
             key={trainer._id}
             position={{
               lat: trainer.geometry.coordinates[1],
@@ -29,9 +30,7 @@ const WrappedMap = withScriptjs(
     );
   })
 );
-// items={this.props.location.state.trainers}
 class MapConfig extends React.Component {
-  // set this to state: this.props.location.state.trainers
   render() {
     return (
       <div style={{ width: "100vw", height: "100vh" }}>

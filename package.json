@@ -8,7 +8,8 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "sass": "node-sass -w dist/scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w dist/scss/ -o dist/css/ --recursive",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false --prefix client && npm run build --prefix client"
   },
   "author": "Luke A Firth",
   "license": "MIT",
