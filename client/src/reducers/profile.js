@@ -2,9 +2,7 @@ import {
   GET_PROFILE,
   GET_PROFILES,
   PROFILE_ERROR,
-  CLEAR_PROFILE,
-  GET_TRAINERPROFILE,
-  GET_TRAINERPROFILES
+  CLEAR_PROFILE
 } from "../actions/types";
 
 const initialState = {
@@ -18,14 +16,12 @@ export default function(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case GET_TRAINERPROFILE:
     case GET_PROFILE:
       return {
         ...state,
         profile: payload,
         loading: false
       };
-    case GET_TRAINERPROFILES:
     case GET_PROFILES:
       return {
         ...state,

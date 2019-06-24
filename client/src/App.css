@@ -4,6 +4,10 @@ font-family: 'Reem Kufi', sans-serif;
 font-family: 'Telex', sans-serif;
 font-family: 'Varela Round', sans-serif;
 font-family: 'Niramit', sans-serif; */
+
+TrainerNavbar {
+  background: black;
+}
 nav .mapicon {
   position: absolute;
   left: 400px;
@@ -11,27 +15,7 @@ nav .mapicon {
   width: 40px;
   visibility: hidden;
 }
-.mapicon1 {
-  position: absolute;
-  left: 300px;
-  top: 400px;
-  width: 40px;
-  visibility: hidden;
-}
-.mapicon2 {
-  position: absolute;
-  left: 200px;
-  top: 700px;
-  width: 40px;
-  visibility: hidden;
-}
-.mapicon3 {
-  position: absolute;
-  left: 360px;
-  top: 530px;
-  width: 40px;
-  visibility: hidden;
-}
+
 .map-container {
   position: absolute;
   height: 900px !important;
@@ -393,6 +377,32 @@ img {
   margin: 0 5px;
 }
 .navbar a:hover {
+  color: #343a56;
+}
+
+.navbart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  right: 0;
+  top: 0;
+  background-color: #000000;
+  /* opacity: 0.9; */
+}
+.navbart ul {
+  display: flex;
+}
+.navbart a {
+  text-decoration: none;
+  color: #f5f5e4;
+  padding: 10px;
+  margin: 0 5px;
+}
+.navbart a:hover {
   color: #343a56;
 }
 

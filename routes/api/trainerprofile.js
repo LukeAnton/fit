@@ -6,22 +6,22 @@ const { check, validationResult } = require("express-validator/check");
 const TrainerProfile = require("../../models/TrainerProfile");
 const Trainer = require("../../models/Trainer");
 
-// @route    GET api/trainertrainerprofile/me
+// @route    GET api/trainerprofile/me
 // @desc     Get current trainers trainertrainerprofile
 // @access   Private
 router.get("/tme", auth, async (req, res) => {
   try {
-    const trainertrainerprofile = await TrainerProfile.findOne({
+    const trainerprofile = await TrainerProfile.findOne({
       trainer: req.trainer.id
     }).populate("trainer", ["name", "avatar"]);
 
-    if (!trainertrainerprofile) {
+    if (!trainerprofile) {
       return res
         .status(400)
         .json({ msg: "There is no trainer trainerprofile for this trainer" });
     }
 
-    res.json(trainertrainerprofile);
+    res.json(trainerprofile);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
@@ -97,7 +97,7 @@ router.post(
     }
   }
 );
-// @route    POST api/profile
+// @route    POST api/trainerprofile
 // @desc     GET all profiles
 // @access   Public
 router.get("/", async (req, res) => {

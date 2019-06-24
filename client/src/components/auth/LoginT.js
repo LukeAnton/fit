@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { login } from "../../actions/auth";
+import { login } from "../../actions/autht";
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
@@ -20,7 +20,7 @@ const Login = ({ login, isAuthenticated }) => {
 
   //Redirect if logged in
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/dashboardt" />;
   }
   return (
     <Fragment>
@@ -51,12 +51,6 @@ const Login = ({ login, isAuthenticated }) => {
       </form>
       <p className="my-1 account-sug">
         Don't have an account? <Link to="/register">Sign Up</Link>
-      </p>
-      <p className="my-1 account-sug">
-        Want to sign up as a Trainer? <Link to="/registert">Sign Up</Link>
-      </p>
-      <p className="my-1 account-sug">
-        Are you a Personal trainer? <Link to="/logint">Login Here</Link>
       </p>
     </Fragment>
   );
