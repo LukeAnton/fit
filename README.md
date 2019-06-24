@@ -14,6 +14,10 @@
 
 <img width="1440" alt="Screen Shot 2019-06-24 at 8 04 31 pm" src="https://user-images.githubusercontent.com/43797015/60010525-5031c300-96bb-11e9-86ab-57111437cc65.png">
 
+##Sign Up
+
+<img width="1440" alt="Screen Shot 2019-06-24 at 7 12 33 pm" src="https://user-images.githubusercontent.com/43797015/60006902-a0595700-96b4-11e9-9de0-a3a110e39d5c.png">
+
 ##Dashboard
 
 <img width="1440" alt="Screen Shot 2019-06-24 at 8 07 19 pm" src="https://user-images.githubusercontent.com/43797015/60010749-c8988400-96bb-11e9-8902-ea4567134036.png">
@@ -41,10 +45,6 @@
 ##Edit Profile
 
 <img width="1440" alt="Screen Shot 2019-06-24 at 7 14 18 pm" src="https://user-images.githubusercontent.com/43797015/60006900-a0595700-96b4-11e9-996b-6c46a307fe6c.png">
-
-##Sign Up
-
-<img width="1440" alt="Screen Shot 2019-06-24 at 7 12 33 pm" src="https://user-images.githubusercontent.com/43797015/60006902-a0595700-96b4-11e9-9de0-a3a110e39d5c.png">
 
 ## Cool Stuff
 
